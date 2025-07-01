@@ -19,7 +19,7 @@ async def extract_text_from_pdf(file: UploadFile = File(...)):
     file_bytes = await file.read()
 
     try:
-        images = convert_from_bytes(file_bytes, dpi=300)
+        images = convert_from_bytes(file_bytes, dpi=150)
 
         full_text = ''
 
